@@ -1,0 +1,68 @@
+<html>
+<head>
+<script src="./jjq.js"></script>
+<script src="./tetris.js"></script>
+<script src="./patterns.js"></script>
+<script src="./hud.js"></script>
+<link rel="stylesheet" type="text/css" href="tetrisStyle.css">
+</head>
+<body>
+<div class="grid-33" >
+	<div class="logo" > </div>
+	<div class="franken-type-font score-section"> score - <span class="score"> 0 </span> </div>
+	<div class="franken-type-font score-section"> time elapsed - <span class="time"> 0 </span> </div>
+	<div class="franken-type-font score-section"> lines per minute - <span class="lines-per-minute"> 0 </span> </div>
+	<div class="controls controls-icon"> </div> 
+</div>
+<div class="grid-33">
+<div class="canvas-class"> <canvas id="canv" width="300" height="500" ></canvas> </div>
+	
+</div>
+<div class="grid-33">
+	
+	<div class="franken-type-font settings-heading"> Settings </div>
+	
+	<ul class="setting-list">
+		<li class="franken-type-font restart btn" onclick="fn_restart()">   <span class="restart-icon btn"> </span>   restart </li>	
+		<li class="franken-type-font btn" onclick="fn_resetToDefault()">   <span class="setting-icon btn"> </span>   Defaults </li>	
+	</ul>
+	
+	<div class="settings-panel">
+	<div class="settings-overlay"></div>
+		<ul class="setting-list">
+			<li class="franken-type-font"> dots <span class="controls icon dot btn" onclick="fn_changeToDot()"> </span> </li>
+			<li class="franken-type-font"> squares <span class="controls icon square btn" onclick="fn_changeToSquare()"> </span> </li>
+		</ul>
+		
+		<ul class="setting-list">
+			<li class="franken-type-font"> speed </li>
+			<li>
+				<div class="franken-type-font fixed-width-30 btn" onclick="decreaseSpeed()">-</div>
+				<div class="franken-type-font fixed-width-30 speed"> 5 </div>
+				<div class="franken-type-font fixed-width-30 btn" onclick="increaseSpeed()">+</div>
+			</li>
+		</ul>
+
+		<ul class="setting-list">
+			<li class="franken-type-font"> level </li>
+			<li>
+				<span class="franken-type-font btn" onclick="decreaseLevel()">-</span>
+				<span class="controls levels level-2"> </span>
+				<span  class="franken-type-font btn" onclick="increaseLevel()">+</span>
+			</li>
+		</ul>
+	</div>
+	
+	<ul class="setting-list">
+		<li class="franken-type-font btn pause" onclick="fn_pause()"> pause</li>
+		<li class="franken-type-font btn resume disabled" onclick="fn_resume()"> resume</li>
+	</ul>
+	
+</div>
+
+<div class="game-over btn" onclick="fn_restart()">Game Over !</div>
+<div class="overlay" onclick="fn_hideOverlay()">
+     
+</div>
+</body>
+</html>
