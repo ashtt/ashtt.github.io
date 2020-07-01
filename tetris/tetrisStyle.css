@@ -1,0 +1,263 @@
+body {
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: "frankentype";
+    src: url(./frankentype.otf) format("opentype");
+}
+.franken-type-font { 
+    font-family: "frankentype", Verdana, Tahoma;
+	font-size: 30px;
+	color: red;
+}
+
+.franken-type-font.settings-heading {
+    font-family: "frankentype", Verdana, Tahoma;
+	font-size: 50px;
+	color: blue;
+	text-align: center;
+}
+
+.score-section { 
+    float: right;
+}
+
+.score-section  span{ 
+	width: 155px;
+	display: inline-block;
+} 
+
+.canvas-class
+{
+	border : 12px dotted blue;
+	margin : 0 auto;
+	width :300px;
+	height :500px;
+}
+.grid-33
+{
+	float : left;
+	width : 33%;
+	height : 100%;
+}
+
+
+.controls-icon
+{
+	background-image: url(./arrowkeys.png);
+    width: 100%;
+    height: 228px;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    clear: right;
+    background-position: center;
+    padding-top: 65px;
+	transform: scale(0.7);
+	transition: all 2s ease-out;
+}
+
+.controls-icon:hover
+{
+
+    opacity: 1;
+    transform: scale(1.3);
+	transition: all 2s ease-out;
+}
+.setting-list{
+	padding:0;
+	list-style:none;
+}
+.setting-list li{
+	text-align: center;
+	width:33%;
+	display:inline-block;
+	margin-right:20px;
+}
+
+.setting-list li div{
+	display:inline-block;
+}
+
+.setting-list li:last-child{
+	margin-right:0;
+}
+
+.icon{
+	background-image: url("./Dots-Squares.png");
+	width : 20px;
+	height : 20px;
+	display: inline-block;
+}
+
+.dot{
+    background-position: 0px -20px;
+}
+
+.square{
+    background-position: 0px 0px;
+}
+
+.levels{
+	background-image: url("./levels.png");
+	width : 60px;
+	height : 20px;
+	display:inline-block;
+}
+
+.levels{
+	background-image: url("./levels.png");
+	background-repeat: no-repeat;
+	width : 60px;
+	height : 20px;
+	display:inline-block;
+}
+
+.level-1{
+	 background-position: 0px 0px;
+}
+
+.level-2{
+	 background-position: 0px -20px;
+}
+
+.level-3{
+	 background-position: 0px -40px;
+}
+
+
+.logo{
+
+	background-image: url("./logo.png");
+	width : 100%;
+	height : 130px;
+	background-repeat: no-repeat;
+	float : left;
+}
+
+
+.restart-icon{
+
+	background-image: url("three-circling-arrows.svg");
+	width : 75px;
+	height : 75px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.restart-icon.done{
+
+	transform:rotate(380deg) scale(1.5);
+	transition: all 2s ease-out;
+	z-index:15;
+	position: relative;
+}
+
+
+.setting-icon
+{
+	background-image: url("./settings-gears.svg");
+	width : 75px;
+	height : 75px;
+	opacity: 0.6;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.game-over{
+	width:70%;
+    font-family: "frankentype", Verdana, Tahoma;
+	font-size: 10px;
+	font-weight: bold;
+	color: #CC0000;
+	opacity:0;
+	position:absolute;
+	top:20%;
+	transform:translateY(-50%);
+	left:0;
+	right:0;
+	margin:0 auto;
+	text-align: center;
+	transform:rotate(-40deg);
+}
+
+.game-over.done{
+
+	opacity:1;
+	top:40%;
+	font-size: 150px;
+	color: #00DD00;
+	transform:rotate(320deg);
+	transition:  all 2s ease-in;
+	z-index: 2;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    opacity: 0;
+	z-index: -1;
+}
+
+.overlay.done{
+	transition: all 2s ease-in;
+    opacity: 0.9;
+	z-index: 1;
+}
+
+.fixed-width-30{
+	width:30px;
+}
+
+.btn{
+	cursor: pointer;
+}
+
+.settings-panel{
+    border: 2px dotted red;
+    padding: 0px 0px 0px 50px;
+    border-radius: 40px;
+	width:320px; 
+	height:240px; 
+    align-content: center;
+}
+
+.settings-panel .settings-overlay{ 
+	position:absolute; 
+	padding: 0px 0px 0px -50px;
+	border-radius: 40px;
+	width:320px; 
+	height:240px; 
+	background: #EEE; 
+	opacity:0.0; 
+	z-index:-1;
+}
+
+.settings-panel .settings-overlay.overlay-active
+{ 
+	z-index:-1;
+	opacity:0.0; 
+	transition:  all 1s ease-in;
+}
+
+.settings-panel  .setting-list li{
+	width:40%;
+	margin-right: 0px;
+	margin-top: 10px;
+}
+
+.disabled{
+	color: #888;
+	cursor:not-allowed
+}
+
+
